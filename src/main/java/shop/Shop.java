@@ -8,8 +8,10 @@ import java.util.Collections;
 
 public class Shop implements ISell {
     private ArrayList<Instrument>instruments;
+    private double shopMoney;
 
-    public Shop() {
+    public Shop(double shopMoney) {
+        this.shopMoney = shopMoney;
         this.instruments = new ArrayList<Instrument>();
     }
 
@@ -19,6 +21,14 @@ public class Shop implements ISell {
 
     public void setInstruments(ArrayList<Instrument> instruments) {
         this.instruments = instruments;
+    }
+
+    public double getShopMoney() {
+        return shopMoney;
+    }
+
+    public void setShopMoney(double shopMoney) {
+        this.shopMoney = shopMoney;
     }
 
     @Override
@@ -31,6 +41,7 @@ public class Shop implements ISell {
         this.instruments.remove(instrument);
     }
 
+    @Override
     public String inventorySort(){
         ArrayList inventoryList = new ArrayList<>();
         for(Instrument item:instruments){

@@ -21,12 +21,18 @@ public class ShopTest {
 
     @Before
     public void setUp() throws Exception {
-        shop1 = new Shop();
-        shop2 = new Shop();
+        shop1 = new Shop(50000);
+        shop2 = new Shop(70000);
         trumpet1 = new Trumpet("Count Bassie", "Brrroo",30,40,2, InstrumentType.BRASS, ColorType.SILVER,4);
         trumpet2 = new Trumpet("War Horn", "Braooooow", 1, 2, 4, InstrumentType.BRASS, ColorType.GOLD, 5);
         guitar1 = new Guitar("Stratocaster","Twang",100,200,1, InstrumentType.STRING, ColorType.BLUE, 6);
         guitar2 = new Guitar ("ReggieBass", "Twoon", 90, 190, 2, InstrumentType.STRING, ColorType.RED, 5);
+    }
+
+    @Test
+    public void setShopMoney(){
+        shop1.setShopMoney(99999);
+        assertEquals(99999, shop1.getShopMoney(),0.01);
     }
 
     @Test

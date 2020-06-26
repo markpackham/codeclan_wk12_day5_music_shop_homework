@@ -13,4 +13,6 @@ public interface ISell {
     String inventorySort();
 
     double totalProfit();
+
+    void sellInstrument(Instrument instrument);
 }

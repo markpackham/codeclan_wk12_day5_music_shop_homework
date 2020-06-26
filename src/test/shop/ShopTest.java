@@ -36,6 +36,15 @@ public class ShopTest {
     }
 
     @Test
+    public void sellInstrument(){
+        shop1.addStock(trumpet1);
+        shop1.addStock(trumpet2);
+        shop1.sellInstrument(trumpet1);
+        assertEquals(50040,shop1.getShopMoney(), 0.01);
+        assertEquals(1,shop1.getInstruments().size());
+    }
+
+    @Test
     public void calculateMarkup(){
     assertEquals(1.33,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
     }

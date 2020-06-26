@@ -2,6 +2,7 @@ package main.java.shop;
 
 import main.java.behaviours.ISell;
 import main.java.instruments.Instrument;
+import main.java.instruments.Trumpet;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -75,5 +76,11 @@ public class Shop implements ISell {
         else{
             return 0;
         }
+    }
+
+    @Override
+    public void sellInstrument(Instrument instrument) {
+        removeStock(instrument);
+        shopMoney += instrument.getSellingPrice();
     }
 }

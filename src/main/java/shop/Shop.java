@@ -6,18 +6,18 @@ import main.java.instruments.Instrument;
 import java.util.ArrayList;
 
 public class Shop implements ISell {
-    private ArrayList<ISell>instruments;
+    private ArrayList<Instrument>instruments;
 
 
     public Shop() {
-        this.instruments = instruments;
+        this.instruments = new ArrayList<Instrument>();
     }
 
-    public ArrayList<ISell> getInstruments() {
+    public ArrayList<Instrument> getInstruments() {
         return instruments;
     }
 
-    public void setInstruments(ArrayList<ISell> instruments) {
+    public void setInstruments(ArrayList<Instrument> instruments) {
         this.instruments = instruments;
     }
 
@@ -28,7 +28,7 @@ public class Shop implements ISell {
 
     @Override
     public void addStock(Instrument instrument) {
-
+        this.instruments.add(instrument);
     }
 
     @Override

@@ -36,11 +36,14 @@ public class ShopTest {
 
     @Test
     public void stocksEmpty(){
-        assertEquals(null,shop1.getInstruments());
+        assertEquals(0,shop1.getInstruments().size());
     }
 
     @Test
     public void addStock() {
+        shop1.addStock(trumpet1);
+        shop1.addStock(trumpet2);
+        assertEquals(2,shop1.getInstruments().size());
     }
 
     @Test

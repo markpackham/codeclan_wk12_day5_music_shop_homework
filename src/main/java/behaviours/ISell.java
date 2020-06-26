@@ -15,4 +15,6 @@ public interface ISell {
     double totalProfit();
 
     void sellInstrument(Instrument instrument);
+
+    void buyInstrument(Instrument instrument);
 }

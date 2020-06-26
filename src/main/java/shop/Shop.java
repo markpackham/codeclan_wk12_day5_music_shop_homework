@@ -83,4 +83,10 @@ public class Shop implements ISell {
         removeStock(instrument);
         shopMoney += instrument.getSellingPrice();
     }
+
+    @Override
+    public void buyInstrument(Instrument instrument){
+        addStock(instrument);
+        shopMoney -= instrument.getBuyingPrice();
+    }
 }

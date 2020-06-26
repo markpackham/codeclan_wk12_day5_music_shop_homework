@@ -49,19 +49,13 @@ public class ShopTest {
     }
 
     @Test
-    public void inventoryListEmpty(){
-        assertEquals(0,shop1.getInventoryList().size());
-    }
-
-    @Test
     public void inventorySort(){
         shop1.addStock(trumpet1);
         shop1.addStock(trumpet2);
         shop1.addStock(guitar1);
         shop1.addStock(guitar2);
-        assertEquals("Count Bassie, War Horn, Stratocaster, ReggieBass",shop1.inventorySort());
+        assertEquals("[Count Bassie, ReggieBass, Stratocaster, War Horn]",shop1.inventorySort());
     }
-
 
     @Test
     public void addStock() {

@@ -4,15 +4,13 @@ import main.java.behaviours.ISell;
 import main.java.instruments.Instrument;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Shop implements ISell {
     private ArrayList<Instrument>instruments;
-    private ArrayList<Instrument>inventoryList;
-
 
     public Shop() {
         this.instruments = new ArrayList<Instrument>();
-        this.inventoryList = new ArrayList<Instrument>();
     }
 
     public ArrayList<Instrument> getInstruments() {
@@ -21,14 +19,6 @@ public class Shop implements ISell {
 
     public void setInstruments(ArrayList<Instrument> instruments) {
         this.instruments = instruments;
-    }
-
-    public ArrayList<Instrument> getInventoryList() {
-        return inventoryList;
-    }
-
-    public void setInventoryList(ArrayList<Instrument> inventoryList) {
-        this.inventoryList = inventoryList;
     }
 
     @Override
@@ -47,14 +37,12 @@ public class Shop implements ISell {
     }
 
     public String inventorySort(){
-        String nameList = "";
-        for (Instrument item:instruments
-             ) {
-            nameList += item.getName() + ", ";
+        ArrayList inventoryList = new ArrayList<>();
+        for(Instrument item:instruments){
+            inventoryList.add(item.getName());
         }
-        // remove last comma and space
-        nameList = nameList.substring(0,nameList.length()-2);
-        return nameList;
+        Collections.sort(inventoryList);
+        return inventoryList.toString();
     }
 
     public double totalProfit() {

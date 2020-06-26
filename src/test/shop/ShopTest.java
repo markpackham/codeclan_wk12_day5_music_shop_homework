@@ -35,6 +35,15 @@ public class ShopTest {
     }
 
     @Test
+    public void totalProfit(){
+        shop1.addStock(trumpet1);
+        shop1.addStock(trumpet2);
+        shop1.addStock(guitar1);
+        shop1.addStock(guitar2);
+        assertEquals(48.84,shop1.totalProfit(),0.01);
+    }
+
+    @Test
     public void stocksEmpty(){
         assertEquals(0,shop1.getInstruments().size());
     }
@@ -53,5 +62,4 @@ public class ShopTest {
         shop1.removeStock(trumpet2);
         assertEquals(1,shop1.getInstruments().size());
     }
-
 }

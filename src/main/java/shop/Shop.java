@@ -36,4 +36,19 @@ public class Shop implements ISell {
         this.instruments.remove(instrument);
     }
 
+    public double totalProfit() {
+        double buyPrice = 0;
+        double sellPrice = 0;
+        for (Instrument instrument:
+             instruments) {
+            buyPrice += instrument.getBuyingPrice();
+            sellPrice += instrument.getSellingPrice();
+        }
+        if(sellPrice>0){
+        return calculateMarkup(buyPrice,sellPrice);
+        }
+        else{
+            return 0;
+        }
+    }
 }

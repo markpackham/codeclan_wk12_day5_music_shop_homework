@@ -46,6 +46,17 @@ public class Shop implements ISell {
         this.instruments.remove(instrument);
     }
 
+    public String inventorySort(){
+        String nameList = "";
+        for (Instrument item:instruments
+             ) {
+            nameList += item.getName() + ", ";
+        }
+        // remove last comma and space
+        nameList = nameList.substring(0,nameList.length()-2);
+        return nameList;
+    }
+
     public double totalProfit() {
         double buyPrice = 0;
         double sellPrice = 0;

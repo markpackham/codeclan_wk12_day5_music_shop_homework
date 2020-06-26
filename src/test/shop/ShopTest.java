@@ -54,6 +54,16 @@ public class ShopTest {
     }
 
     @Test
+    public void inventorySort(){
+        shop1.addStock(trumpet1);
+        shop1.addStock(trumpet2);
+        shop1.addStock(guitar1);
+        shop1.addStock(guitar2);
+        assertEquals("Count Bassie, War Horn, Stratocaster, ReggieBass",shop1.inventorySort());
+    }
+
+
+    @Test
     public void addStock() {
         shop1.addStock(trumpet1);
         shop1.addStock(trumpet2);

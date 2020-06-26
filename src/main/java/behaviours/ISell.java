@@ -9,4 +9,8 @@ public interface ISell {
     void addStock(Instrument instrument);
 
     void removeStock(Instrument instrument);
+
+    String inventorySort();
+
+    double totalProfit();
 }

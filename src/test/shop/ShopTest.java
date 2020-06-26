@@ -31,7 +31,13 @@ public class ShopTest {
 
     @Test
     public void calculateMarkup(){
-    assertEquals(25.0,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
+    assertEquals(1.33,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
+    }
+
+    @Test
+    public void calculateMarkup__forbidZeroDivision(){
+        trumpet1.setSellingPrice(0);
+        assertEquals(0,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
     }
 
     @Test
@@ -40,7 +46,7 @@ public class ShopTest {
         shop1.addStock(trumpet2);
         shop1.addStock(guitar1);
         shop1.addStock(guitar2);
-        assertEquals(48.84,shop1.totalProfit(),0.01);
+        assertEquals(1.95,shop1.totalProfit(),0.01);
     }
 
     @Test

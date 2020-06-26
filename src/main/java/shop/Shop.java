@@ -22,11 +22,6 @@ public class Shop implements ISell {
     }
 
     @Override
-    public double calculateMarkup(double buyingPrice, double sellingPrice) {
-        return (((sellingPrice-buyingPrice)/sellingPrice)*100);
-    }
-
-    @Override
     public void addStock(Instrument instrument) {
         this.instruments.add(instrument);
     }
@@ -45,6 +40,16 @@ public class Shop implements ISell {
         return inventoryList.toString();
     }
 
+    @Override
+    public double calculateMarkup(double buyingPrice, double sellingPrice) {
+        if(sellingPrice > 0) {
+            return sellingPrice/buyingPrice;
+        }else{
+            return 0;
+        }
+    }
+
+    @Override
     public double totalProfit() {
         double buyPrice = 0;
         double sellPrice = 0;

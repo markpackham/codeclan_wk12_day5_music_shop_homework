@@ -48,6 +48,10 @@ public class ShopTest {
 
     @Test
     public void removeStock() {
+        shop1.addStock(trumpet1);
+        shop1.addStock(trumpet2);
+        shop1.removeStock(trumpet2);
+        assertEquals(1,shop1.getInstruments().size());
     }
 
 }

@@ -33,7 +33,7 @@ public class Shop implements ISell {
 
     @Override
     public void removeStock(Instrument instrument) {
-
+        this.instruments.remove(instrument);
     }
 
 }

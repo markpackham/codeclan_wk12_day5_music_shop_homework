@@ -7,10 +7,12 @@ import java.util.ArrayList;
 
 public class Shop implements ISell {
     private ArrayList<Instrument>instruments;
+    private ArrayList<Instrument>inventoryList;
 
 
     public Shop() {
         this.instruments = new ArrayList<Instrument>();
+        this.inventoryList = new ArrayList<Instrument>();
     }
 
     public ArrayList<Instrument> getInstruments() {
@@ -19,6 +21,14 @@ public class Shop implements ISell {
 
     public void setInstruments(ArrayList<Instrument> instruments) {
         this.instruments = instruments;
+    }
+
+    public ArrayList<Instrument> getInventoryList() {
+        return inventoryList;
+    }
+
+    public void setInventoryList(ArrayList<Instrument> inventoryList) {
+        this.inventoryList = inventoryList;
     }
 
     @Override

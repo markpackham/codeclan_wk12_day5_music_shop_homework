@@ -1,4 +1,4 @@
-package test.instruments;
+package test.specific_instruments;
 
 import main.java.instruments.ColorType;
 import main.java.instruments.InstrumentType;

@@ -2,7 +2,7 @@ package test.instruments;
 
 import main.java.instruments.ColorType;
 import main.java.instruments.InstrumentType;
-import main.java.instruments.Trumpet;
+import main.java.instruments.specific_instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,8 @@
-package main.java.instruments;
+package main.java.instruments.specific_instruments;
+
+import main.java.instruments.ColorType;
+import main.java.instruments.InstrumentType;
+import main.java.instruments.StringInstrument;
 
 public final class Guitar extends StringInstrument {
 

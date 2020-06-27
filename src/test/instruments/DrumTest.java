@@ -1,7 +1,7 @@
 package test.instruments;
 
 import main.java.instruments.ColorType;
-import main.java.instruments.Drum;
+import main.java.instruments.specific_instruments.Drum;
 import main.java.instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,9 @@
 package test.shop;
 
 import main.java.instruments.ColorType;
-import main.java.instruments.Guitar;
+import main.java.instruments.specific_instruments.Guitar;
 import main.java.instruments.InstrumentType;
-import main.java.instruments.Trumpet;
+import main.java.instruments.specific_instruments.Trumpet;
 import main.java.shop.Shop;
 import org.junit.Before;
 import org.junit.Test;

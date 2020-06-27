@@ -1,7 +1,6 @@
 package test.instruments;
 
 import main.java.instruments.ColorType;
-import main.java.instruments.Guitar;
 import main.java.instruments.Harp;
 import main.java.instruments.InstrumentType;
 import org.junit.Before;

@@ -17,4 +17,6 @@ public interface ISell {
     void sellInstrument(Instrument instrument);
 
     void buyInstrument(Instrument instrument);
+
+    double salesTax(Instrument instrument);
 }

@@ -88,4 +88,9 @@ public class Shop implements ISell {
         addStock(instrument);
         shopMoney -= instrument.getBuyingPrice();
     }
+
+    @Override
+    public double salesTax(Instrument instrument) {
+        return instrument.getSellingPrice() * 0.02;
+    }
 }

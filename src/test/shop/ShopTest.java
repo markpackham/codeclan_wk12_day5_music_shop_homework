@@ -99,4 +99,9 @@ public class ShopTest {
         shop1.removeStock(trumpet2);
         assertEquals(1,shop1.getInstruments().size());
     }
+
+    @Test
+    public void salesTax(){
+        assertEquals(0.8,shop1.salesTax(trumpet1),0.01);
+    }
 }

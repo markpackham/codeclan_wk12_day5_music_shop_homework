@@ -54,7 +54,7 @@ public class Shop implements ISell {
     @Override
     public double calculateMarkup(double buyingPrice, double sellingPrice) {
         if(sellingPrice > 0) {
-            return sellingPrice/buyingPrice;
+            return sellingPrice-buyingPrice;
         }else{
             return 0;
         }

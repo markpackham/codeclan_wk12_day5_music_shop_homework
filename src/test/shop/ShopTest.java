@@ -53,7 +53,7 @@ public class ShopTest {
     
     @Test
     public void calculateMarkup(){
-    assertEquals(1.33,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
+    assertEquals(10,shop1.calculateMarkup(trumpet1.getBuyingPrice(),trumpet1.getSellingPrice()),0.01);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class ShopTest {
         shop1.addStock(trumpet2);
         shop1.addStock(guitar1);
         shop1.addStock(guitar2);
-        assertEquals(1.95,shop1.totalProfit(),0.01);
+        assertEquals(211,shop1.totalProfit(),0.01);
     }
 
     @Test
